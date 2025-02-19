@@ -2,7 +2,7 @@ import { object, string } from "zod";
 
 const getPasswordSchema = (type: "password" | "confirmPassword") =>
     string({ required_error: `${type} is required` })
-        .min(8, `${type} must be atleast 8 characters`)
+        .min(6, `${type} must be at least 6 characters`)
         .max(32, `${type} can not exceed 32 characters`);
 
 const getEmailSchema = () =>
